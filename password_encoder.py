@@ -10,9 +10,12 @@ def encode_password(decoded_password):
 
     return encoded_password
 
-def decode_password(encoded_password):
-    #TODO: Complete the decoder
-    pass
+def decode_password(encoded_password):   #completed by Sonia Alwani
+    res = ''
+    for i in encoded_password:
+        digit = (int(i)-3)%10 # subtract 3 and wrap around
+        res += str(digit)
+    return res
 
 # Main code
 decoded_password = ''
